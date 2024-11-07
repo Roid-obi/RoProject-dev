@@ -24,6 +24,7 @@ const Home = () => {
     "Tidak punya kodham 😭",
     "Mommy Kafkha",
     "Presiden",
+    "Atmin Suki"
   ];
 
   // Fungsi untuk memilih kodam secara acak
