@@ -1,4 +1,5 @@
 "use client";
+import BackButton from "@/components/BackButton";
 import { useState } from "react";
 
 const Home = () => {
@@ -48,47 +49,37 @@ const Home = () => {
   };
 
   return (
-    <div className="min-h-screen flex flex-col items-center justify-center  p-6">
-      <h1 className="text-4xl font-bold mb-6">Konversi Suhu</h1>
-      <div className="bg-white p-6 rounded-lg shadow-lg w-full max-w-md">
-        <div className="mb-4">
-          <input
-            type="number"
-            value={inputValue}
-            onChange={(e) => setInputValue(e.target.value)}
-            className="w-full p-2 border border-gray-300 rounded-md"
-            placeholder="Masukkan suhu"
-          />
-        </div>
-        <div className="mb-4">
-          <select
-            value={fromUnit}
-            onChange={(e) => setFromUnit(e.target.value)}
-            className="w-full p-2 border border-gray-300 rounded-md"
-          >
-            <option value="Celsius">Celsius</option>
-            <option value="Fahrenheit">Fahrenheit</option>
-            <option value="Kelvin">Kelvin</option>
-            <option value="Reamur">Reamur</option>
-          </select>
-        </div>
-        <button
-          onClick={convertTemperature}
-          className="w-full py-2 bg-blue-500 text-white rounded-md"
-        >
-          Konversi
-        </button>
-        <div className="mt-6">
-          <p className="font-semibold">Hasil Konversi:</p>
-          <ul className="list-disc pl-5">
-            <li>Celsius: {convertedValues.celsius}°C</li>
-            <li>Fahrenheit: {convertedValues.fahrenheit}°F</li>
-            <li>Reamur: {convertedValues.reamur}°R</li>
-            <li>Kelvin: {convertedValues.kelvin}K</li>
-          </ul>
+    <>
+      <BackButton />
+      <div className="min-h-screen flex flex-col items-center justify-center  p-6">
+        <h1 className="text-4xl font-bold mb-6">Konversi Suhu</h1>
+        <div className="bg-white p-6 rounded-lg shadow-lg w-full max-w-md">
+          <div className="mb-4">
+            <input type="number" value={inputValue} onChange={(e) => setInputValue(e.target.value)} className="w-full p-2 border border-gray-300 rounded-md" placeholder="Masukkan suhu" />
+          </div>
+          <div className="mb-4">
+            <select value={fromUnit} onChange={(e) => setFromUnit(e.target.value)} className="w-full p-2 border border-gray-300 rounded-md">
+              <option value="Celsius">Celsius</option>
+              <option value="Fahrenheit">Fahrenheit</option>
+              <option value="Kelvin">Kelvin</option>
+              <option value="Reamur">Reamur</option>
+            </select>
+          </div>
+          <button onClick={convertTemperature} className="w-full py-2 bg-blue-500 text-white rounded-md">
+            Konversi
+          </button>
+          <div className="mt-6">
+            <p className="font-semibold">Hasil Konversi:</p>
+            <ul className="list-disc pl-5">
+              <li>Celsius: {convertedValues.celsius}°C</li>
+              <li>Fahrenheit: {convertedValues.fahrenheit}°F</li>
+              <li>Reamur: {convertedValues.reamur}°R</li>
+              <li>Kelvin: {convertedValues.kelvin}K</li>
+            </ul>
+          </div>
         </div>
       </div>
-    </div>
+    </>
   );
 };
 

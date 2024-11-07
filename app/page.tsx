@@ -19,12 +19,12 @@ export default function Home() {
           </Link>
           <Link href={"/konversi-suhu"} className="text-white">
             <OpsionProject>
-              <Image src={IconSuhu} alt="Konversi Suhu" className="logo-icon"/>
+              <Image src={IconSuhu} alt="Konversi Suhu" className="logo-icon-suhu"/>
             </OpsionProject>
           </Link>
           <Link href={"/cek-kodham"} className="text-white">
             <OpsionProject>
-              <Image src={IconKod} alt="Cek Kodham" className="logo-icon"/>
+              <Image src={IconKod} alt="Cek Kodham" className="logo-icon-kod"/>
             </OpsionProject>
           </Link>
         </HeaderHomeStyle>

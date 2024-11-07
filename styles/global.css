@@ -123,3 +123,8 @@ body {
   transform-origin: 0vw 19vh;
   box-shadow: 100vmin 0 12.587998951218069vmin currentColor;
 }
+
+
+.back-button {
+  width: 40px;
+}

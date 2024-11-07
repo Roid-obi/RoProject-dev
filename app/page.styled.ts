@@ -143,8 +143,12 @@ export const OpsionProject = styled.div`
     box-shadow: rgba(0, 0, 0, 0.4) 0px 30px 90px;
     transition: 0.5s;
   }
-  .logo-icon {
+  .logo-icon-suhu {
     margin: auto;
     width: 80px;
+  }
+  .logo-icon-kod {
+    margin: auto;
+    width: 140px;
   }
 `;
