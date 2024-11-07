@@ -33,7 +33,7 @@ const Home = () => {
       setRandomKodam(kodamList[randomIndex]);
       setSubmittedName(userName); // Menyimpan nama yang telah dimasukkan
       setIsLoading(false); // Hentikan loading setelah 2 detik
-    }, 2000); // Delay 2 detik untuk efek loading
+    }, 1000); // Delay 1 detik untuk efek loading
   };
 
   // Fungsi untuk reset halaman
