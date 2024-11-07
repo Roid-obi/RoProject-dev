@@ -21,7 +21,7 @@ export default function Home() {
   };
 
   return (
-    <div className="grid place-items-center min-h-screen p-8 bg-gray-100">
+    <div className="grid place-items-center min-h-screen p-8">
       <div className="bg-white p-6 rounded-lg shadow-lg">
         <div className="mb-4 p-4 text-right text-2xl bg-gray-200 rounded-md min-h-[60px]">
           {display || "0"}

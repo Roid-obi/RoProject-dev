@@ -18,16 +18,6 @@ export default function RootLayout({
     <html lang="en">
       <body className={noto_sans.className}>
         <main>{children}</main>
-        <div className="background">
-          <span></span>
-          <span></span>
-          <span></span>
-          <span></span>
-          <span></span>
-          <span></span>
-          <span></span>
-          <span></span>
-        </div>
       </body>
     </html>
   );
