@@ -13,9 +13,8 @@ const BackButton = () => {
   return (
     <button
       onClick={handleBackClick}
-      className="fixed top-2 left-4 p-2  text-white rounded-full shadow-lg"
+      className="button-back-b fixed top-2 left-4 p-2  text-white rounded-full"
     >
-        
       <Image src={IconBack} alt='back' className='back-button'/>
     </button>
   );

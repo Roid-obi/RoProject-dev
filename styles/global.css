@@ -3,8 +3,7 @@
 @tailwind utilities;
 
 /* font goggle */
-@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
-
+@import url("https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap");
 
 /* style */
 * {
@@ -18,12 +17,11 @@ body {
   overflow-x: hidden;
 }
 
-
 /* Background */
 
 @keyframes move {
   100% {
-      transform: translate3d(0, 0, 1px) rotate(360deg);
+    transform: translate3d(0, 0, 1px) rotate(360deg);
   }
 }
 
@@ -49,7 +47,6 @@ body {
   animation-timing-function: linear;
   animation-iteration-count: infinite;
 }
-
 
 .background span:nth-child(0) {
   color: #2b0e5d;
@@ -124,7 +121,15 @@ body {
   box-shadow: 100vmin 0 12.587998951218069vmin currentColor;
 }
 
-
 .back-button {
   width: 40px;
+}
+
+.button-back-b {
+  box-shadow: rgba(50, 50, 105, 0.15) 0px 2px 5px 0px, rgba(0, 0, 0, 0.05) 0px 1px 1px 0px;
+}
+
+.button-back-b:hover {
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 15px 25px, rgba(0, 0, 0, 0.05) 0px 5px 10px;
+  transition: 0.4s;
 }

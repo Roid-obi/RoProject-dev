@@ -1,4 +1,5 @@
 "use client";
+import BackButton from "@/components/BackButton";
 import { useState } from "react";
 
 const Home = () => {
@@ -22,7 +23,7 @@ const Home = () => {
     "Cit cit cit🐭",
     "Tidak punya kodham 😭",
     "Mommy Kafkha",
-    "Presiden"
+    "Presiden",
   ];
 
   // Fungsi untuk memilih kodam secara acak
@@ -46,17 +47,12 @@ const Home = () => {
 
   return (
     <div className="min-h-screen flex flex-col items-center justify-center bg-gray-100 p-6">
+      <BackButton />
       <h1 className="text-4xl font-bold mb-6">Cek Kodam</h1>
       <div className="bg-white p-6 rounded-lg shadow-lg w-full max-w-md">
         {/* Form input tetap ada meskipun hasil sudah ditampilkan */}
         <div className="mb-4">
-          <input
-            type="text"
-            value={userName}
-            onChange={(e) => setUserName(e.target.value)}
-            className="w-full p-2 border border-gray-300 rounded-md"
-            placeholder="Masukkan nama Anda"
-          />
+          <input type="text" value={userName} onChange={(e) => setUserName(e.target.value)} className="w-full p-2 border border-gray-300 rounded-md" placeholder="Masukkan nama Anda" />
         </div>
 
         <button
