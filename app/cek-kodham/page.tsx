@@ -5,7 +5,7 @@ import { useState } from "react";
 const Home = () => {
   const [userName, setUserName] = useState<string>(""); // Untuk menyimpan nilai input yang terus diperbarui
   const [submittedName, setSubmittedName] = useState<string>(""); // Menyimpan nama yang sudah diproses
-  const [randomKodam, setRandomKodam] = useState<string | null>(null);
+  const [randomKodham, setRandomKodam] = useState<string | null>(null);
   const [isLoading, setIsLoading] = useState<boolean>(false);
 
   // Daftar Kodam (contoh)
@@ -48,7 +48,7 @@ const Home = () => {
   return (
     <div className="min-h-screen flex flex-col items-center justify-center bg-gray-100 p-6">
       <BackButton />
-      <h1 className="text-4xl font-bold mb-6">Cek Kodam</h1>
+      <h1 className="text-4xl font-bold mb-6">Cek Kodham</h1>
       <div className="bg-white p-6 rounded-lg shadow-lg w-full max-w-md">
         {/* Form input tetap ada meskipun hasil sudah ditampilkan */}
         <div className="mb-4">
@@ -56,11 +56,11 @@ const Home = () => {
         </div>
 
         <button
-          onClick={randomKodam ? resetPage : getRandomKodam}
+          onClick={randomKodham ? resetPage : getRandomKodam}
           disabled={!userName || isLoading} // Tombol disable saat loading atau input kosong
           className="w-full py-2 bg-blue-500 text-white rounded-md disabled:bg-gray-300"
         >
-          {randomKodam ? "Cek Kembali" : isLoading ? "Loading..." : "Cek Kodam"}
+          {randomKodham ? "Cek Kembali" : isLoading ? "Loading..." : "Cek Kodham"}
         </button>
 
         {/* Menampilkan loading spinner jika loading */}
@@ -72,10 +72,10 @@ const Home = () => {
         )}
 
         {/* Menampilkan output setelah proses selesai */}
-        {submittedName && randomKodam && !isLoading && (
+        {submittedName && randomKodham && !isLoading && (
           <div className="mt-6">
-            <p className="font-semibold">{submittedName}, Kodam Anda:</p>
-            <p className="text-xl font-semibold text-blue-600">{randomKodam}</p>
+            <p className="font-semibold">{submittedName}, Kodham Anda:</p>
+            <p className="text-xl font-semibold text-blue-600">{randomKodham}</p>
           </div>
         )}
       </div>
