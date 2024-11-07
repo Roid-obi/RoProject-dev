@@ -14,8 +14,14 @@
   }
 }
 
-body {
+* {
+  font-family: Arial, Helvetica, sans-serif;
+  padding: 0px;
+  margin: 0px;
+  box-sizing: 0px;
+}
+
+.default-next-page {
   color: var(--foreground);
   background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
 }
