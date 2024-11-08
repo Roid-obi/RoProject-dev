@@ -16,15 +16,23 @@ const Home = () => {
     "Vestia Zeta",
     "Nenek Turbo 🥵",
     "Nyi RoroJongrang",
-    "Elmanuk",
+    "Elmanuk 👽",
     "Fufufafa",
     "Ambalabu",
     "Nasi Goreng 😋",
     "Cit cit cit🐭",
-    "Tidak punya kodham 😭",
-    "Mommy Kafkha",
-    "Presiden",
-    "Atmin Suki"
+    "Tidak punya Kodham 😭",
+    "MommyKafkha 🥵",
+    "Atmin Suki",
+    "Kapal Karam",
+    "PopMie 🥵",
+    "Kewer-Kewer",
+    "Hawk Tuah",
+    "Skibidy",
+    "PDiddy",
+    "Nigger",
+    "Anomali Hytam",
+    "Tidak punya Kodham 😭",
   ];
 
   // Fungsi untuk memilih kodam secara acak
