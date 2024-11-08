@@ -5,12 +5,13 @@ import Button from "@/components/Button";
 import IconCalculator from "@/public/ios-calculator-3.svg";
 import IconSuhu from "@/public/klipartz.com.png";
 import IconKod from "@/public/pngegg.png";
+import IconHeart from "@/public/heart-tanya.png";
 
 export default function Home() {
   return (
     <Padding>
       <Content>
-        <TextTitle>Welcome to RoProject-dev</TextTitle>
+        <TextTitle>Welcome to <b>RoProject-dev</b></TextTitle>
         <HeaderHomeStyle>
           <Link href={"/calculator"} className="text-white">
             <OpsionProject>
@@ -25,6 +26,11 @@ export default function Home() {
           <Link href={"/cek-kodham"} className="text-white">
             <OpsionProject>
               <Image src={IconKod} alt="Cek Kodham" className="logo-icon-kod"/>
+            </OpsionProject>
+          </Link>
+          <Link href={"/cek-kecocokan"} className="text-white">
+            <OpsionProject>
+              <Image src={IconHeart} alt="Cek Kecocokan" className="logo-icon-hati"/>
             </OpsionProject>
           </Link>
         </HeaderHomeStyle>

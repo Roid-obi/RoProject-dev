@@ -59,7 +59,7 @@ const Home = () => {
         <button
           onClick={randomKodham ? resetPage : getRandomKodam}
           disabled={!userName || isLoading} // Tombol disable saat loading atau input kosong
-          className="w-full py-2 bg-blue-500 text-white rounded-md disabled:bg-gray-300"
+          className="w-full py-2 bg-purple-500 text-white rounded-md disabled:bg-gray-300 hover:opacity-80"
         >
           {randomKodham ? "Cek Kembali" : isLoading ? "Loading..." : "Cek Kodham"}
         </button>
@@ -67,7 +67,7 @@ const Home = () => {
         {/* Menampilkan loading spinner jika loading */}
         {isLoading && (
           <div className="mt-6 text-center">
-            <div className="w-8 h-8 border-4 border-t-4 border-blue-500 rounded-full animate-spin mx-auto"></div>
+            <div className="w-8 h-8 border-4 border-t-4 border-purple-500 rounded-full animate-spin mx-auto"></div>
             <p className="mt-2">Sedang memproses...</p>
           </div>
         )}
@@ -76,7 +76,7 @@ const Home = () => {
         {submittedName && randomKodham && !isLoading && (
           <div className="mt-6">
             <p className="font-semibold">{submittedName}, Kodham Anda:</p>
-            <p className="text-xl font-semibold text-blue-600">{randomKodham}</p>
+            <p className="text-xl font-semibold text-purple-600">{randomKodham}</p>
           </div>
         )}
       </div>

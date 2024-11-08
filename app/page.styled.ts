@@ -151,4 +151,8 @@ export const OpsionProject = styled.div`
     margin: auto;
     width: 140px;
   }
+  .logo-icon-hati {
+    margin: auto;
+    width: 140px;
+  }
 `;
