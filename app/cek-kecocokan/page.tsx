@@ -1,4 +1,5 @@
 "use client";
+import BackButton from "@/components/BackButton";
 import { useState } from "react";
 
 const CekJodoh = () => {
@@ -36,6 +37,7 @@ const CekJodoh = () => {
 
   return (
     <div className="min-h-screen flex flex-col items-center justify-center bg-gray-100 p-6">
+      <BackButton />
       <h1 className="text-4xl font-bold mb-6">Cek Jodoh</h1>
       <div className="bg-white p-6 rounded-lg shadow-lg w-full max-w-md">
         {/* Form input untuk nama user dan nama pasangan */}
