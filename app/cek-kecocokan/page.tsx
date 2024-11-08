@@ -1,5 +1,4 @@
 "use client";
-import BackButton from "@/components/BackButton";
 import { useState } from "react";
 
 const CekJodoh = () => {
@@ -8,11 +7,20 @@ const CekJodoh = () => {
   const [compatibility, setCompatibility] = useState<number | null>(null);
   const [isLoading, setIsLoading] = useState<boolean>(false);
 
-  // Fungsi untuk menghasilkan persentase kecocokan secara acak
+  // Fungsi untuk menghasilkan persentase kecocokan dengan probabilitas tertentu
   const calculateCompatibility = () => {
     setIsLoading(true);
     setTimeout(() => {
-      const randomPercentage = Math.floor(Math.random() * 101); // Menghasilkan angka antara 0-100
+      let randomPercentage;
+      const chance = Math.random();
+      
+      // 20% kemungkinan mendapatkan angka 50% ke bawah
+      if (chance <= 0.2) {
+        randomPercentage = Math.floor(Math.random() * 51); // Angka antara 0-50
+      } else {
+        randomPercentage = Math.floor(Math.random() * 51) + 50; // Angka antara 51-100
+      }
+
       setCompatibility(randomPercentage);
       setIsLoading(false);
     }, 2000); // Delay 2 detik untuk efek loading
@@ -28,13 +36,18 @@ const CekJodoh = () => {
 
   return (
     <div className="min-h-screen flex flex-col items-center justify-center bg-gray-100 p-6">
-      <BackButton />
-      <h1 className="text-4xl font-bold mb-6">Cek Kecocokan</h1>
+      <h1 className="text-4xl font-bold mb-6">Cek Jodoh</h1>
       <div className="bg-white p-6 rounded-lg shadow-lg w-full max-w-md">
         {/* Form input untuk nama user dan nama pasangan */}
         {!compatibility && !isLoading && (
           <div className="mb-4">
-            <input type="text" value={userName} onChange={(e) => setUserName(e.target.value)} className="w-full p-2 mb-2 border border-gray-300 rounded-md" placeholder="Masukkan nama Anda" />
+            <input
+              type="text"
+              value={userName}
+              onChange={(e) => setUserName(e.target.value)}
+              className="w-full p-2 mb-2 border border-gray-300 rounded-md"
+              placeholder="Masukkan nama Anda"
+            />
             <input
               type="text"
               value={partnerName}
@@ -48,7 +61,7 @@ const CekJodoh = () => {
         <button
           onClick={compatibility ? resetPage : calculateCompatibility}
           disabled={!userName || !partnerName || isLoading}
-          className="w-full py-2 bg-pink-500 text-white rounded-md disabled:bg-gray-300 hover:opacity-80"
+          className="w-full py-2 bg-pink-500 text-white rounded-md disabled:bg-gray-300 hover:opacity-90"
         >
           {compatibility ? "Cek Lagi" : isLoading ? "Loading..." : "Cek Kecocokan"}
         </button>
