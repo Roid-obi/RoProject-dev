@@ -14,7 +14,7 @@ const CekJodoh = () => {
     setTimeout(() => {
       let randomPercentage;
       const chance = Math.random();
-      
+
       // 20% kemungkinan mendapatkan angka 50% ke bawah
       if (chance <= 0.2) {
         randomPercentage = Math.floor(Math.random() * 51); // Angka antara 0-50
@@ -25,6 +25,23 @@ const CekJodoh = () => {
       setCompatibility(randomPercentage);
       setIsLoading(false);
     }, 2000); // Delay 2 detik untuk efek loading
+  };
+
+  // Fungsi untuk mendapatkan deskripsi berdasarkan persentase
+  const getDescription = (percentage: number) => {
+    if (percentage < 50) {
+      return "Hubungan Anda mungkin memerlukan lebih banyak usaha. Jangan menyerah, tetap berusaha untuk saling memahami.";
+    } else if (percentage <= 65) {
+      return "Ada potensi, tetapi perlu lebih banyak waktu dan usaha untuk membangun hubungan yang kuat.";
+    } else if (percentage <= 70) {
+      return "Hubungan Anda cukup menjanjikan, tetapi masih ada beberapa hal yang perlu diperhatikan.";
+    } else if (percentage <= 80) {
+      return "Hubungan Anda berada di jalur yang baik, teruskan komunikasi dan kebersamaan Anda.";
+    } else if (percentage <= 90) {
+      return "Hubungan Anda sangat solid! Anda berdua memiliki koneksi yang kuat.";
+    } else {
+      return "Hubungan Anda luar biasa! Anda berdua sangat cocok satu sama lain.";
+    }
   };
 
   // Fungsi untuk reset halaman
@@ -43,13 +60,7 @@ const CekJodoh = () => {
         {/* Form input untuk nama user dan nama pasangan */}
         {!compatibility && !isLoading && (
           <div className="mb-4">
-            <input
-              type="text"
-              value={userName}
-              onChange={(e) => setUserName(e.target.value)}
-              className="w-full p-2 mb-2 border border-gray-300 rounded-md"
-              placeholder="Masukkan nama Anda"
-            />
+            <input type="text" value={userName} onChange={(e) => setUserName(e.target.value)} className="w-full p-2 mb-2 border border-gray-300 rounded-md" placeholder="Masukkan nama Anda" />
             <input
               type="text"
               value={partnerName}
@@ -83,6 +94,7 @@ const CekJodoh = () => {
               {userName} & {partnerName}, tingkat kecocokan Anda:
             </p>
             <p className="text-2xl font-bold text-pink-600">{compatibility}%</p>
+            <p className="mt-4 text-gray-700">{getDescription(compatibility)}</p>
           </div>
         )}
       </div>
